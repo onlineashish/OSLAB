@@ -38,11 +38,12 @@ printf("\t %d ",safe[i]);
 return 1;
 }
 else{
- printf("\n System is not in safe state \n");
- return 0;
+printf("\n System is not in safe state \n");
+return 0;
 }
 }
 void resource()
+
 {
 int i, j, req[psize][rsize], k;
 printf("\n Enter the process number\t");
@@ -91,6 +92,7 @@ printf("\n Enter the number of resources\t");
 scanf(" %d", &rsize);
 printf("\n Enter the max matrix\n");
 for(i=0;i<psize;i++)
+
 for(j=0; j<rsize;j++)
 scanf(" %d", &max[i][j]);
 printf("\n Enter the allocation matrix\n");
@@ -103,11 +105,13 @@ scanf(" %d", &avail[i]);
 for(i=0;i<psize;i++)
 for(j=0; j<rsize;j++)
 need[i][j] = max[i][j]-alloc[i][j];
+
 printf("\n The need matrix is: \n");
 for(i=0;i<psize;i++)
 { printf("\n");
 for(j=0; j<rsize;j++)
 printf("\t%d",need[i][j]);
+
 }
 safety();
 while(1)
